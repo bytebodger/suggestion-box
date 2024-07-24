@@ -55,7 +55,7 @@ The following are some features that I'd like to highlight:
 - Comments are shown in chronological order (oldest at the top) so the discussion can be read in the order in which it was created.
 - Datetimes are displayed as MM/DD/YYYY with the time shown on a 24-hour clock.  All datetimes are tracked with UTC timestamps, which are then displayed in the user's local time.
 - The `<ShowIf/>` component is a helper component that allows for the display of conditional information in the JSX while maintaining a purely-declarative syntax.
-- All code utilizes a modern React syntax with Hooks and a strong adherence to TypeScript conventions.  There are no class-based components.
+- All code utilizes modern React syntax with Hooks and a strong adherence to TypeScript conventions.  There are no class-based components.
 
 ### Next Steps
 
