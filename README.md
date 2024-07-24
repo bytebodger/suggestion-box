@@ -1,3 +1,5 @@
+![screenshot](http://url/to/img.png)
+
 # suggestion-box
 
 ### Objective
