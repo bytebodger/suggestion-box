@@ -1,4 +1,4 @@
-![screenshot](http://url/to/img.png)
+![screenshot](https://github.com/bytebodger/suggestion-box/blob/main/public/screenshot.png?raw=true)
 
 # suggestion-box
 
