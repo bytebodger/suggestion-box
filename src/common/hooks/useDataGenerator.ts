@@ -65,7 +65,6 @@ export const useDataGenerator = () => {
          })
       }
       setSuggestions(currentSuggestions);
-      console.log(getSuggestions());
    }
 
    const createUsers = (totalUsers: number = 10) => {
@@ -80,7 +79,6 @@ export const useDataGenerator = () => {
       setUsers(currentUsers);
       if (currentUsers.length === getUsers().length)
          setUser(currentUsers[0]);
-      console.log(getUsers());
    }
 
    return {
