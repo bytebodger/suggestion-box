@@ -1,7 +1,8 @@
-import { Box, CssBaseline, Drawer, List } from '@mui/material';
+import { AppBar, Box, CssBaseline, Drawer, List } from '@mui/material';
 import { useEffect } from 'react';
 import { Pages } from '../../pages/Pages';
 import { useDataGenerator } from '../hooks/useDataGenerator';
+import { AddSuggestion } from './AddSuggestion';
 import { LeftNav } from './LeftNav';
 
 export const SiteTemplate = () => {
@@ -22,10 +23,10 @@ export const SiteTemplate = () => {
             sx={{
                '& .MuiDrawer-paper': {
                   boxSizing: 'border-box',
-                  width: 240,
+                  width: 300,
                },
                flexShrink: 0,
-               width: 240,
+               width: 300,
             }}
             variant={'permanent'}
          >
@@ -37,6 +38,18 @@ export const SiteTemplate = () => {
                   <LeftNav/>
                </List>
             </Box>
+            <AppBar
+               position={'fixed'}
+               sx={{
+                  backgroundColor: 'white',
+                  bottom: 0,
+                  left: 0,
+                  top: 'auto',
+                  width: 299,
+               }}
+            >
+               <AddSuggestion/>
+            </AppBar>
          </Drawer>
          <Box
             component={'main'}

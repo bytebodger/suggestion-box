@@ -5,5 +5,6 @@ export interface Suggestion {
    id: string,
    submittedBy: string,
    submittedOn: number,
+   text: string,
    title: string,
 }

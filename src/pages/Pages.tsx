@@ -1,15 +1,18 @@
 import { Route, Routes } from 'react-router-dom';
 import { Path } from '../common/enums/Path';
-import { Home } from './home/Home';
+import { suggestionStore } from '../common/stores/suggestionStore';
+import { Suggestion } from './suggestion/Suggestion';
 
 export const Pages = () => {
+   const [getSuggestion] = suggestionStore(state => [state.getSuggestion]);
+
    return <>
       <Routes>
          <Route
             element={
-               <Home/>
+               <Suggestion suggestion={getSuggestion()}/>
             }
-            path={Path.home}
+            path={Path.suggestion}
          />
          <Route
             element={

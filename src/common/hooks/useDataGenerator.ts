@@ -22,18 +22,20 @@ export const useDataGenerator = () => {
       state.setSuggestions,
    ])
 
-   const createSuggestions = (totalSuggestions: number = 1) => {
-      const currentSuggestions = [...getSuggestions()];
+   const createSuggestions = (totalSuggestions: number = 1, clearSuggestions: boolean = true) => {
+      const currentSuggestions = clearSuggestions ? [] : [...getSuggestions()];
       const users = getUsers();
       let referenceTime = dayjs().utc().valueOf();
       for (let i = 0; i < totalSuggestions; i++) {
          const id = faker.string.uuid();
          let randomUserIndex = Math.floor(Math.random() * users.length);
          const submittedBy = users[randomUserIndex].id;
-         let randomTimeOffset = Math.floor(Math.random() * 10000) + 10000;
+         let randomTimeOffset = Math.floor(Math.random() * 10000000) + 10000000;
          referenceTime -= randomTimeOffset;
          const submittedOn = referenceTime;
          const title = faker.lorem.sentence();
+         const randomSentenceCount = Math.floor(Math.random() * 5) + 1;
+         const text = faker.lorem.sentences(randomSentenceCount);
          const randomTotalComments = Math.floor(Math.random() * 9) + 1;
          const comments: Comment[] = [];
          let commentTime = referenceTime;
@@ -41,7 +43,7 @@ export const useDataGenerator = () => {
             const id = faker.string.uuid();
             randomUserIndex = Math.floor(Math.random() * users.length);
             const submittedBy = users[randomUserIndex].id;
-            randomTimeOffset = Math.floor(Math.random() * 1000);
+            randomTimeOffset = Math.floor(Math.random() * 1000000);
             commentTime += randomTimeOffset;
             const submittedOn = commentTime;
             const randomSentenceCount = Math.floor(Math.random() * 5) + 1;
@@ -58,6 +60,7 @@ export const useDataGenerator = () => {
             id,
             submittedBy,
             submittedOn,
+            text,
             title,
          })
       }
