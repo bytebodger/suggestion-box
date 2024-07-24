@@ -61,12 +61,12 @@ The following are some features that I'd like to highlight:
 
 The following were beyond the scope of the requested features, but would be logical to add in future iterations:
 
-- A top nav bar that confirms the currently-logged-in user.
-- Login functionality.
+- Login functionality
+- A top nav bar that confirms the currently-logged-in user
 - Search
-- The ability to click on any given user and see a new screen that shows all of their suggestions and/or all comments that they've added to existing suggestions.
-- The ability to mark a suggestion as being "Resolved" or "Closed".
-- The ability to mark a suggestion as being a "Duplicate" - presumably referencing another suggestion in which the main discussion may be ongoing.
+- The ability to click on any given user and see a new screen that shows all of their suggestions and/or all comments that they've added to existing suggestions
+- The ability to mark a suggestion as being "Resolved" or "Closed"
+- The ability to mark a suggestion as being a "Duplicate" - presumably referencing another suggestion in which the main discussion may be ongoing
 
 ### Evaluation Criteria
 
