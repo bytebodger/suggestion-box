@@ -30,10 +30,7 @@ export const SiteTemplate = () => {
             }}
             variant={'permanent'}
          >
-            <Box sx={{
-               marginTop: 3,
-               overflow: 'auto',
-            }}>
+            <Box sx={{ overflow: 'auto' }}>
                <List sx={{ padding: 0 }}>
                   <LeftNav/>
                </List>
